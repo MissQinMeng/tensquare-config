@@ -1,20 +1,21 @@
 server:
-  port: 9001
+  port: 12000
 spring:
   application:
-    name: tensquare-base #指定服务名
-  datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/tensquare_base?characterEncoding=utf-8
-    username: root
-    password: root
-  jpa:
-    database: MySQL
-    show-sql: true
-
+    name: iep-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/MissQinMeng/tensquare-config.git
+          search-paths: /**
+          username: 1730392988@qq.com
+          password: qinyuanmeng1024
+      label: master
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:6868/eureka
+      defaultZone: http://127.0.0.1:6868/eureka/
   instance:
+    instance-id: tensquare-config12000
     prefer-ip-address: true
