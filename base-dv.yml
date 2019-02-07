@@ -9,8 +9,7 @@ spring:
         git:
           uri: https://github.com/MissQinMeng/tensquare-config.git
           search-paths: /**
-          username: 1730392988@qq.com
-          password: qinyuanmeng1024
+         
       label: master
 eureka:
   client:
